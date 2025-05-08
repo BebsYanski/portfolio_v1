@@ -624,7 +624,7 @@ span {
 }
 
 .form-msg {
-  /* display: none; */
+  display: none;
   text-align: center;
   font-size: 3rem;
   color: green;
