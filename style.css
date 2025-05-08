@@ -623,6 +623,15 @@ span {
   font-size: 2rem;
 }
 
+.form-msg {
+  /* display: none; */
+  text-align: center;
+  font-size: 3rem;
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .footer {
   position: relative;
   bottom: 0;

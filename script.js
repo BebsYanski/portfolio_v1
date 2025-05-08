@@ -25,3 +25,34 @@ window.onscroll = () => {
     }
   });
 };
+
+const form = document.getElementById("contact-form");
+const message = document.getElementById("form-message");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      form.reset();
+      message.style.display = "block";
+    } else {
+      message.style.display = "block";
+      message.style.color = "red";
+      message.textContent = "❌ Oops! Something went wrong. Please try again.";
+    }
+  } catch (error) {
+    message.style.display = "block";
+    message.style.color = "red";
+    message.textContent = "❌ Network error. Please try again later.";
+  }
+});

@@ -244,7 +244,11 @@
       <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#" method="POST">
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/mrbqkvwp"
+          method="POST"
+        >
           <div class="input-group">
             <div class="input-box">
               <input
@@ -264,10 +268,10 @@
             <div class="input-box">
               <input
                 type="tel"
-                name="phoneNumber"
+                name="phone"
                 placeholder="Your Phone Number"
                 required
-                pattern="[0-9]{10}"
+                pattern="[0-9]{8,10}"
               />
               <input
                 type="text"
@@ -290,6 +294,9 @@
             <input type="submit" value="Send Message" class="btn" />
           </div>
         </form>
+        <p id="form-message" class="form-msg">
+          ✅ Thank you! Your message has been sent.
+        </p>
       </section>
 
       <footer class="footer">
